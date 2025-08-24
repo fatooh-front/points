@@ -1,0 +1,13 @@
+{
+  "table.pagination.fetchedResults": "Total",
+  "table.pagination.rowsPerPage": "Row/page",
+  "table.pagination.pageOf": "Page {{currentPage}} of {{totalPages}}",
+  "table.viewOption.columns": "Edit table",
+  "table.toolbar.viewOption.toggleColumns.title": "Toggle columns",
+  "table.toolbar.advancedFilters": "Advanced filters",
+  "table.noResults": "No Results",
+  "table.clearFilters": "Clear Filters",
+  "sharedTable.noResults": "No results found",
+  "searchTable.placeholder": "Search...",
+  "reset": "Reset"
+}

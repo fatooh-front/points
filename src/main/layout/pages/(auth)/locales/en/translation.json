@@ -1,0 +1,8 @@
+{
+  "auth": {
+    "form": {
+      "password_placeholder": "Please enter your password",
+      "email_placeholder": "Please enter your username"
+    }
+  }
+}

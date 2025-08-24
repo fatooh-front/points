@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 82%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 182.86 32.31% 12.75%;
+    --primary-foreground: 210 40% 98%;
+    --primary-50: 190 56% 95%;
+    --primary-100: 190 54% 90%;
+    --primary-150: 190 52% 85%;
+    --primary-200: 190 50% 80%;
+    --primary-300: 190 48% 70%;
+    --primary-400: 190 46% 60%;
+    --primary-500: 190 44% 50%;
+    --primary-600: 190 42% 40%;
+    --primary-700: 190 40% 30%;
+    --primary-800: 190 60% 15%;
+    --primary-850: 190 60% 14%;
+    --primary-900: 190 60% 12%;
+    --primary-950: 190 60% 10%;
+    --primary-1000: 190 60% 8%;
+
+
+    --primary-second: 41, 65%, 48%, 1;
+    --primary-second-100: 60 81.82% 95%;
+    --primary-second-150: 60 81.82% 90%;
+    --primary-second-200: 60 81.82% 80%;
+    --primary-second-300: 60 81.82% 70%;
+    --primary-second-400: 60 81.82% 60%;
+    --primary-second-500: 60 81.82% 50%;
+    --primary-second-600: 60 81.82% 43.14%;
+    --primary-second-700: 60 81.82% 35%;
+    --primary-second-800: 60 81.82% 25%;
+    --primary-second-850: 60 81.82% 18%;
+    --primary-second-900: 60 81.82% 12%;
+    --primary-second-950: 60 81.82% 7%;
+    --primary-second-1000: 60 81.82% 3%;
+
+    --secondary: 0 0% 32%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-50: 0 0% 95%;
+    --secondary-100: 0 0% 90%;
+    --secondary-150: 0 0% 85%;
+    --secondary-200: 0 0% 80%;
+    --secondary-300: 0 0% 75%;
+    --secondary-400: 0 0% 70%;
+    --secondary-500: 0 0% 65%;
+    --secondary-600: 0 0% 60%;
+    --secondary-700: 0 0% 55%;
+    --secondary-800: 0 0% 50%;
+    --secondary-850: 0 0% 48%;
+    --secondary-900: 0 0% 43%;
+    --secondary-950: 0 0% 38%;
+    --secondary-1000: 0 0% 33%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    /* ----------------custom variables----------------------------- */
+    --g: currentColor 14.5px, #0000 0 calc(100% - 14.5px), currentColor 0;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .ms-sidebar {
+    margin-inline-start: 0px !important;
+  }
+
+  .w-appbar {
+    width: 100% !important;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .ms-sidebar {
+    margin-inline-start: 0px !important;
+  }
+
+  .w-appbar {
+    width: 100% !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+textarea {
+  @apply resize-none;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+  @apply h-2;
+  @apply rounded;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+  @apply rounded-2xl;
+  @apply shadow-scrollbar;
+}
+
+::selection {
+  @apply bg-primary-200;
+  @apply text-black;
+}
+
+@layer utilities {
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+.ck-balloon-panel {
+  z-index: 9999 !important;
+}

@@ -1,0 +1,13 @@
+{
+  "table.pagination.fetchedResults": "الإجمالي",
+  "table.pagination.rowsPerPage": "أسطر لكل صفحة",
+  "table.pagination.pageOf": "الصفحة {{currentPage}} من {{totalPages}}",
+  "table.viewOption.columns": "تعديل الجدول",
+  "table.toolbar.viewOption.toggleColumns.title": "تبديل الأعمدة",
+  "table.toolbar.advancedFilters": "تصفيات متقدمة",
+  "table.noResults": "لا يوجد نتائج",
+  "table.clearFilters": "إعادة تعيين",
+  "sharedTable.noResults": "لا توجد نتائج",
+  "searchTable.placeholder": "بحث...",
+  "reset": "اعادة تعيين"
+}

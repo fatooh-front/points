@@ -1,0 +1,12 @@
+{
+    "curd.form.addText": "Add Option",
+    "curd.form.header.add": "Add {{label}}",
+    "curd.form.header.edit": "Edit {{label}}",
+    "curd.form.header.view": "{{label}} Details",
+    "curd.form.header.delete": "Delete {{label}}",
+    "curd.form.save": "Save",
+    "curd.form.name_ar": "Option Name in Arabic",
+    "curd.form.name_en": "Option Name in English",
+    "curd.form.name_en.required": "Option Name in English is required",
+    "curd.form.name_ar.required": "Option Name in Arabic is required"
+}

@@ -1,0 +1,18 @@
+{
+  "/": "Home",
+  "/engine": "Engines",
+  "/branches": "Branches",
+  "/cars": "Cars",
+  "cars": "Cars",
+  "/models": "Car Models",
+  "/brands": "Car Brands",
+  "/cities": "Cities",
+
+  "/types": "Types",
+  "/contact": "Contact Us",
+  "/categories": "Categories",
+  "/years": "Year of Manufacture",
+  "settings": "Settings",
+  "navbar.userNav.profile": "الملف الشخصي",
+  "navbar.userNav.logout": "تسجيل الخروج"
+}

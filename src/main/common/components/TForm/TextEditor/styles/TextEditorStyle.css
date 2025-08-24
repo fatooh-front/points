@@ -1,0 +1,38 @@
+.jodit-status-bar-link {
+  display: none;
+}
+
+.jodit-status-bar {
+  position: sticky;
+  bottom: 0;
+}
+
+.jodit-add-new-line {
+  display: none !important;
+}
+
+.jodit-container:not(.jodit_fullsize) {
+  max-height: 300px;
+  overflow: auto;
+}
+/* .jodit_fullsize-box_true .jodit-container {
+  max-height: 100% !important;
+  height: 100% !important;
+} */
+html.jodit_fullsize-box_true {
+  position: fixed !important;
+  max-height: auto !important;
+}
+body.jodit_fullsize-box_true,
+html.jodit_fullsize-box_true {
+  height: 0 !important;
+  max-height: auto !important;
+  overflow: hidden !important;
+  width: 0 !important;
+}
+.jodit_fullsize-box_true {
+  overflow: visible !important;
+  position: static !important;
+  z-index: 100000 !important;
+  max-height: auto !important;
+}

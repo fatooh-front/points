@@ -1,0 +1,12 @@
+{
+    "curd.form.addText": "اضافة إختيار",
+    "curd.form.header.add": "إضافة {{label}}",
+    "curd.form.header.edit": "تعديل {{label}}",
+    "curd.form.header.view": "تفاصيل {{label}}",
+    "curd.form.header.delete": "حذف {{label}}",
+    "curd.form.save": "حفظ",
+    "curd.form.name_ar": "اسم الإختيار بالعربية",
+    "curd.form.name_en": "اسم الإختيار بالانجليزية",
+    "curd.form.name_en.required": "اسم الإختيار بالانجليزية مطلوب",
+    "curd.form.name_ar.required": "اسم الإختيار بالعربية مطلوب"
+}
