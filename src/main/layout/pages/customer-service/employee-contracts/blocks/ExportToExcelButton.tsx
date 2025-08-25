@@ -56,7 +56,10 @@ export function ExportToExcelButton({ data }: { data: EmployeeStats[] | [] }) {
   };
 
   return (
-    <Button onClick={handleExport} className=" h-11 ">
+    <Button
+      onClick={handleExport}
+      className=" h-11 bg-white text-base text-primary hover:bg-slate-100"
+    >
       تصدير إلى Excel
     </Button>
   );

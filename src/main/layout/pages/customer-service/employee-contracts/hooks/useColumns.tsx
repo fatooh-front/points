@@ -23,7 +23,17 @@ export const useColumns = () => {
         />
       ),
     },
-
+    {
+      accessorKey: "branchName",
+      header: ({ column }) => (
+        <DataTableColumnHeader
+          column={column}
+          title={t("table.header.totalPoints", {
+            defaultValue: " اسم الفرع",
+          })}
+        />
+      ),
+    },
     {
       accessorKey: "openPoints",
       header: ({ column }) => (
@@ -67,17 +77,7 @@ export const useColumns = () => {
           })}
         />
       ),
-    },
-    {
-      accessorKey: "branchName",
-      header: ({ column }) => (
-        <DataTableColumnHeader
-          column={column}
-          title={t("table.header.totalPoints", {
-            defaultValue: " اسم الفرع",
-          })}
-        />
-      ),
+      cell: ({ row }) => <div>{row.original.totalPoints ?? 0}</div>,
     },
   ];
 

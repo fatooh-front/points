@@ -17,6 +17,7 @@ import type { UseFormReturn } from "react-hook-form";
 import MiniCalendarSVG from "@/main/global/assets/svg/MiniCalendarSVG";
 import { FormDescription, FormLabel, FormMessage } from "./form";
 import React from "react";
+import { Matcher } from "react-day-picker";
 
 interface DatePickerProps {
   name: string;
@@ -35,6 +36,7 @@ interface DatePickerProps {
   className?: string;
   Icon?: React.ReactNode;
   errorMessageClaasName?: string;
+  disabled?: Matcher;
   FormDescriptionClaasName?: string;
   label?: string;
 }
@@ -47,6 +49,7 @@ export function DatePicker({
   className,
   errorMessageClaasName,
   FormDescriptionClaasName,
+  disabled,
   label = "تاريخ",
   ...props
 }: DatePickerProps) {
@@ -96,6 +99,7 @@ export function DatePicker({
         <PopoverContent className="w-auto p-0" align="start">
           <Calendar
             dir=""
+            disabled={disabled}
             mode="single"
             selected={form.watch(name)}
             onSelect={(e) => {
