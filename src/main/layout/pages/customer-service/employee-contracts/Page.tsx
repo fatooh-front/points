@@ -56,11 +56,7 @@ export default function Page() {
             <TableSkeleton />
           </div>
         ))}
-      <HeadeBar
-        search={search}
-        onSearch={onSearch}
-        data={dataOfPoints || []}
-      ></HeadeBar>
+      <HeadeBar handleSearch={onSearch} data={dataOfPoints || []}></HeadeBar>
       {data && columns && (
         <DataTable
           data={Array.isArray(data) ? dataOfPoints : []}

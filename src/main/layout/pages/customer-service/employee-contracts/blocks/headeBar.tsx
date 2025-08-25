@@ -7,13 +7,13 @@ import { useGetAllEmployees } from "@/main/global/api/restful/userManagmentAPI/C
 
 export default function HeadeBar({
   data,
-  onSearch,
-  search,
+  handleSearch,
 }: {
   data: EmployeeStats[];
-  search?: { [key: string]: string };
-  onSearch: (value: { [key: string]: string }) => void;
+  handleSearch: (value: { [key: string]: string }) => void;
 }) {
+  const [search, onSearch] = useState<{ [key: string]: string }>();
+
   function formatDateToYMD(date: Date) {
     return date.toISOString().split("T")[0] + "T23:59:59";
   }
@@ -33,13 +33,12 @@ export default function HeadeBar({
   return (
     <div
       className="px-6
-     bg-white justify-center items-center h-appbar flex md:w-[calc((100%)-269px)] max-md:w-full absolute right-0 top-[80px] ms-sidebar"
+     bg-white justify-between items-center h-appbar flex md:w-[calc((100%)-269px)] max-md:w-full absolute right-0 top-[80px] ms-sidebar"
     >
+      <div></div>
       <MultiSearch
-        onClear={() => {
-          setFrom(defaultFrom);
-          setTo(defaultTo);
-          setClientSearchKey("");
+        onSearchBtn={() => {
+          handleSearch(search || {});
         }}
         search={search}
         onSearch={onSearch}
@@ -86,15 +85,9 @@ export default function HeadeBar({
             name: "reservationDate",
             title: "التاريخ",
           },
-          {
-            minWidth: "180px",
-            component: () => <ExportToExcelButton data={data || []} />,
-
-            name: "reservationDate",
-            title: "التاريخ",
-          },
         ]}
       />
+      <ExportToExcelButton data={data || []} />
     </div>
   );
 }

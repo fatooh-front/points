@@ -56,7 +56,7 @@ export function ExportToExcelButton({ data }: { data: EmployeeStats[] | [] }) {
   };
 
   return (
-    <Button onClick={handleExport} className="rounded-none h-full w-full">
+    <Button onClick={handleExport} className=" h-11 ">
       تصدير إلى Excel
     </Button>
   );

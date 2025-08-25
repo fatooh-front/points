@@ -1,13 +1,15 @@
 import { customSearchStyles } from "@/main/common/components/TForm/reactSelect/styles/customStyleReactSelect";
-import { RefreshCcw } from "lucide-react";
+import { RefreshCcw, Search } from "lucide-react";
 import { useState } from "react";
 import ReactSelect from "react-select";
+import { ChevronDown } from "lucide-react"; // أيقونة جاهزة
 
 export default function MultiSearch({
   searchsData,
   className,
   onSearch,
   onClear,
+  onSearchBtn,
   search,
   hide,
 }: {
@@ -21,9 +23,11 @@ export default function MultiSearch({
     inputDefaultValue?: string;
     minWidth?: string;
     name: string;
+
     title: string;
   }[];
   className?: string;
+  onSearchBtn?: () => any;
 
   onSearch: (value: { [key: string]: string }) => void;
   search?: { [key: string]: string };
@@ -47,7 +51,7 @@ export default function MultiSearch({
       <div
         className={
           ` rounded-[8px] ${
-            onClear ? "rounded-e-none" : ""
+            onClear || onSearchBtn ? "rounded-e-none" : ""
           } flex border h-[48px] min-w-[321px] ` + className
         }
       >
@@ -74,6 +78,9 @@ export default function MultiSearch({
                     if (item.onChange) {
                       action === "input-change" ? item.onChange(value) : "";
                     }
+                  }}
+                  components={{
+                    DropdownIndicator: () => <ChevronDown />, // نربط الكومبوننت المخصص
                   }}
                   openMenuOnFocus={true}
                   autoFocus={
@@ -149,6 +156,16 @@ export default function MultiSearch({
           className=" h-full w-9 flex justify-center items-center bg-[#162A2B] rounded-e-[8px] cursor-pointer"
         >
           <RefreshCcw color="#fff" />
+        </div>
+      ) : null}
+      {onSearchBtn ? (
+        <div
+          onClick={() => {
+            onSearchBtn && onSearchBtn();
+          }}
+          className=" h-full w-9 flex justify-center items-center bg-[#162A2B] rounded-e-[8px] cursor-pointer"
+        >
+          <Search color="#fff" />
         </div>
       ) : null}
     </div>
